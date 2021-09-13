@@ -151,9 +151,16 @@ export default function Gallery({ setValue, setSelectedIndex }) {
           content="Making Montessori Education accessible for all children | Gallery"
           key="og:title"
         />
-        {/* --- ADD URL ONCE DEPLOYED --- */}
-        <meta property="og:url" key="og:url" content="" />
-        <link rel="canonical" key="canonical" href="" />
+        <meta
+          property="og:url"
+          key="og:url"
+          content="fox-tree-kids-nextjs.vercel.app/gallery"
+        />
+        <link
+          rel="canonical"
+          key="canonical"
+          href="https://fox-tree-kids-nextjs.vercel.app/gallery"
+        />
       </Head>
       <Grid
         item

@@ -330,9 +330,16 @@ export default function Join({ setValue, setSelectedIndex }) {
           content="Making Montessori Education accessible for all children | Join Waiting List"
           key="og:title"
         />
-        {/* --- ADD URL ONCE DEPLOYED --- */}
-        <meta property="og:url" key="og:url" content="" />
-        <link rel="canonical" key="canonical" href="" />
+        <meta
+          property="og:url"
+          key="og:url"
+          content="fox-tree-kids-nextjs.vercel.app/join"
+        />
+        <link
+          rel="canonical"
+          key="canonical"
+          href="https://fox-tree-kids-nextjs.vercel.app/join"
+        />
       </Head>
       <Grid item>
         <Grid container direction="column">

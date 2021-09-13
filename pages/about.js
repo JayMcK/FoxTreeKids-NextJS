@@ -193,9 +193,16 @@ export default function About({ setValue, setSelectedIndex }) {
           content="Making Montessori Education accessible for all children | About Us"
           key="og:title"
         />
-        {/* --- ADD URL ONCE DEPLOYED --- */}
-        <meta property="og:url" key="og:url" content="" />
-        <link rel="canonical" key="canonical" href="" />
+        <meta
+          property="og:url"
+          key="og:url"
+          content="fox-tree-kids-nextjs.vercel.app/about"
+        />
+        <link
+          rel="canonical"
+          key="canonical"
+          href="https://fox-tree-kids-nextjs.vercel.app/about"
+        />
       </Head>
       <Grid
         item

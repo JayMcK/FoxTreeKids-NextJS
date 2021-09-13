@@ -150,9 +150,16 @@ export default function LandingPage({ setValue, setSelectedIndex }) {
           content="Making Montessori Education accessible for all children | Fox Tree Kids"
           key="og:title"
         />
-        {/* --- ADD URL ONCE DEPLOYED --- */}
-        <meta property="og:url" key="og:url" content="" />{" "}
-        <link rel="canonical" key="canonical" href="" />
+        <meta
+          property="og:url"
+          key="og:url"
+          content="fox-tree-kids-nextjs.vercel.app"
+        />
+        <link
+          rel="canonical"
+          key="canonical"
+          href="https://fox-tree-kids-nextjs.vercel.app"
+        />
       </Head>
       <Grid item>
         {/*-----Hero Block -----*/}
@@ -189,7 +196,6 @@ export default function LandingPage({ setValue, setSelectedIndex }) {
                     className={classes.joinButton}
                     onClick={() => setValue(false)}
                     component={Link}
-                    
                     href="/join"
                     style={{ marginBottom: matchesXS ? "1em" : 0 }}
                   >
@@ -205,7 +211,6 @@ export default function LandingPage({ setValue, setSelectedIndex }) {
                       setSelectedIndex(0);
                     }}
                     component={Link}
-                    
                     href="/school"
                   >
                     Learn More <span style={{ marginRight: 10 }}></span>
@@ -266,7 +271,6 @@ export default function LandingPage({ setValue, setSelectedIndex }) {
                 setSelectedIndex(0);
               }}
               component={Link}
-              
               href="/school"
               className={classes.learnButton}
               style={{ marginBottom: matchesSM ? "2em" : 0 }}
@@ -329,7 +333,6 @@ export default function LandingPage({ setValue, setSelectedIndex }) {
                 setValue(2);
               }}
               component={Link}
-              
               href="/admissions"
               className={classes.learnButton}
               style={{ marginBottom: matchesSM ? "2em" : 0 }}
@@ -403,7 +406,6 @@ export default function LandingPage({ setValue, setSelectedIndex }) {
                 setSelectedIndex(2);
               }}
               component={Link}
-              
               href="/curriculum"
               style={{ marginBottom: matchesSM ? "2em" : 0 }}
             >
@@ -468,7 +470,6 @@ export default function LandingPage({ setValue, setSelectedIndex }) {
                         setSelectedIndex(2);
                       }}
                       component={Link}
-                      
                       href="/curriculum"
                     >
                       Learn More <span style={{ marginRight: 10 }}></span>
@@ -530,7 +531,6 @@ export default function LandingPage({ setValue, setSelectedIndex }) {
                       setValue(3);
                     }}
                     component={Link}
-                    
                     href="/about"
                     style={{
                       color: theme.palette.common.orange,
@@ -576,7 +576,6 @@ export default function LandingPage({ setValue, setSelectedIndex }) {
                       setValue(4);
                     }}
                     component={Link}
-                    
                     href="/contact"
                     style={{
                       color: theme.palette.common.orange,

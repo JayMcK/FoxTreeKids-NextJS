@@ -87,9 +87,16 @@ export default function OurSchool({ setValue, setSelectedIndex }) {
           content="Making Montessori Education accessible for all children | Our School"
           key="og:title"
         />
-        {/* --- ADD URL ONCE DEPLOYED --- */}
-        <meta property="og:url" key="og:url" content="" />
-        <link rel="canonical" key="canonical" href="" />
+        <meta
+          property="og:url"
+          key="og:url"
+          content="fox-tree-kids-nextjs.vercel.app/school"
+        />
+        <link
+          rel="canonical"
+          key="canonical"
+          href="https://fox-tree-kids-nextjs.vercel.app/school"
+        />
       </Head>
       <Grid container direction="column">
         <Grid item>
@@ -170,7 +177,6 @@ export default function OurSchool({ setValue, setSelectedIndex }) {
                         setSelectedIndex(2);
                       }}
                       component={Link}
-                      
                       href="/curriculum"
                       style={{
                         color: theme.palette.common.orange,
@@ -228,7 +234,6 @@ export default function OurSchool({ setValue, setSelectedIndex }) {
                         setSelectedIndex(3);
                       }}
                       component={Link}
-                      
                       href="/gallery"
                       style={{
                         color: theme.palette.common.orange,
@@ -297,7 +302,6 @@ export default function OurSchool({ setValue, setSelectedIndex }) {
                     setSelectedIndex(1);
                   }}
                   component={Link}
-                  
                   href="/visit"
                   style={{
                     color: theme.palette.common.orange,

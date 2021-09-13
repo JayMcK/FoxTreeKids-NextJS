@@ -66,9 +66,16 @@ export default function Admissions({ setValue, setSelectedIndex }) {
           content="Making Montessori Education accessible for all children | Admissions"
           key="og:title"
         />
-        {/* --- ADD URL ONCE DEPLOYED --- */}
-        <meta property="og:url" key="og:url" content="" />
-        <link rel="canonical" key="canonical" href="" />
+        <meta
+          property="og:url"
+          key="og:url"
+          content="fox-tree-kids-nextjs.vercel.app/admissions"
+        />
+        <link
+          rel="canonical"
+          key="canonical"
+          href="https://fox-tree-kids-nextjs.vercel.app/admissions"
+        />
       </Head>
       <Grid item>
         {/*----- Join Block -----*/}
@@ -130,7 +137,6 @@ export default function Admissions({ setValue, setSelectedIndex }) {
                   setValue(false);
                 }}
                 component={Link}
-                
                 href="/join"
                 style={{
                   color: theme.palette.common.orange,
