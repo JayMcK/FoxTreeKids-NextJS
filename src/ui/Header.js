@@ -178,6 +178,7 @@ export default function Header({
   const [anchorEl, setAnchorEl] = useState(null);
   const [openMenu, setOpenMenu] = useState(false);
   const [openDrawer, setOpenDrawer] = useState(false);
+  const [previousURL, setPreviousURL] = useState("");
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -198,6 +199,29 @@ export default function Header({
     setAnchorEl(null);
     setOpenMenu(false);
   };
+
+  useEffect(() => {
+    if (previousURL !== window.location.pathname) {
+      setPreviousURL(window.location.pathname);
+    }
+    checkPath();
+  }, [value, menuOptions, selectedIndex, routes]);
+
+  function checkPath() {
+    [...menuOptions, ...routes].forEach((route) => {
+      switch (window.location.pathname) {
+        case `${route.link}`:
+          setValue(route.activeIndex);
+          setSelectedIndex(route.selectedIndex);
+          break;
+        case "/join":
+          setValue(false);
+          break;
+        default:
+          break;
+      }
+    });
+  }
 
   const menuOptions = useMemo(
     () => [
@@ -257,34 +281,6 @@ export default function Header({
     ],
     [anchorEl, classes.drawerItemIcon]
   );
-
-  useEffect(() => {
-    [...menuOptions, ...routes].forEach((route) => {
-      switch (window.location.pathname) {
-        case `${route.link}`:
-          if (value !== route.activeIndex) {
-            setValue(route.activeIndex);
-            if (route.selectedIndex && route.selectedIndex !== selectedIndex) {
-              setSelectedIndex(route.selectedIndex);
-            }
-          }
-          break;
-        case "/join":
-          if (value !== false) {
-            setValue(false);
-            console.log("value", value);
-          }
-          break;
-        default:
-          break;
-      }
-    });
-  }, [value, menuOptions, selectedIndex, routes, setSelectedIndex, setValue]);
-
-  useEffect(() => {
-    console.log("value", value);
-    console.log("selectedindex", selectedIndex);
-  }, [value, selectedIndex]);
 
   const tabs = (
     <Fragment>
