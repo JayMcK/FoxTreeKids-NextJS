@@ -179,6 +179,8 @@ export default function Header({
   const [openMenu, setOpenMenu] = useState(false);
   const [openDrawer, setOpenDrawer] = useState(false);
   const [previousURL, setPreviousURL] = useState("");
+  let routes = [];
+  let menuOptions = [];
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -223,7 +225,7 @@ export default function Header({
     });
   }
 
-  const menuOptions = useMemo(
+  menuOptions = useMemo(
     () => [
       { name: "Our School", link: "/school", activeIndex: 1, selectedIndex: 0 },
       { name: "Visit Us", link: "/visit", activeIndex: 1, selectedIndex: 1 },
@@ -243,7 +245,7 @@ export default function Header({
     []
   );
 
-  const routes = useMemo(
+  routes = useMemo(
     () => [
       {
         name: "Home",
