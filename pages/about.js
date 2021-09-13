@@ -58,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
     cursor: "pointer",
     boxShadow: theme.shadows[3],
     [theme.breakpoints.down("xs")]: {
-      width: "18em",
+      width: "15em",
     },
   },
   teamContainer: {
@@ -103,6 +103,9 @@ const useStyles = makeStyles((theme) => ({
   profileImage: {
     [theme.breakpoints.down("sm")]: {
       width: "20em",
+    },
+    [theme.breakpoints.down("xs")]: {
+      width: "18em",
     },
     boxShadow: theme.shadows[3],
   },
@@ -167,7 +170,7 @@ export default function About({ setValue, setSelectedIndex }) {
         name: "Keziah Snider",
         position: "Chef",
         image: "/assets/teamFour.jpg",
-        info: "After 4 years as a Chef for a catering company, Keziah joined our team and has been cooking yummy meals for our pupils and staff members ever since joining us!",
+        info: "After 4 years as a Chef for a catering company, Keziah joined our team and has been cooking yummy meals for our pupils and staff members ever since joining us! Her favourite meals to cook for the community are spaghetti bolognaise, fish stew and vegetable stirfry!",
       },
       {
         name: "Spencer Talbot",
@@ -373,53 +376,60 @@ export default function About({ setValue, setSelectedIndex }) {
         style={{ zIndex: 1302 }}
         onClose={() => setDialogOpen(false)}
       >
-        <Grid
-          container
-          direction="column"
-          alignItems="center"
-          justifyContent="center"
-          className={classes.teamDialogBackground}
-          style={{ height: "60em" }}
-        >
-          <Grid item style={{ marginTop: "5em" }}>
-            <img
-              src={profile.image}
-              className={classes.profileImage}
-              alt="profile"
-            />
-          </Grid>
-          <Grid item>
-            <Typography gutterBottom variant="h3">
-              {profile.name}
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Typography
-              gutterBottom
-              variant="subtitle1"
-              style={{ fontWeight: "bold" }}
-            >
-              {profile.position}
-            </Typography>
-          </Grid>
-          <Grid item align="center" style={{ maxWidth: "30em" }}>
-            <Typography
-              variant="body1"
-              gutterBottom
-              className={classes.infoText}
-              style={{ marginLeft: "1em", marginRight: "1em" }}
-            >
-              {profile.info}
-            </Typography>
-          </Grid>
-          <Button
-            className={classes.backButton}
-            onClick={() => setDialogOpen(false)}
-            disableRipple
-            style={{ marginBottom: "2em" }}
+        <Grid item>
+          <Grid
+            container
+            direction="column"
+            alignItems="center"
+            justifyContent="center"
+            className={classes.teamDialogBackground}
+            style={{ minHeight: "100vh" }}
           >
-            Back
-          </Button>
+            <Grid item style={{ marginTop: "5em" }}>
+              <img
+                src={profile.image}
+                className={classes.profileImage}
+                alt="profile"
+              />
+            </Grid>
+            <Grid item>
+              <Typography gutterBottom variant="h3">
+                {profile.name}
+              </Typography>
+            </Grid>
+            <Grid item>
+              <Typography
+                gutterBottom
+                variant="subtitle1"
+                style={{ fontWeight: "bold" }}
+              >
+                {profile.position}
+              </Typography>
+            </Grid>
+            <Grid item align="center" style={{ maxWidth: "30em" }}>
+              <Typography
+                variant="body1"
+                gutterBottom
+                className={classes.infoText}
+                style={{
+                  marginLeft: "1em",
+                  marginRight: "1em",
+                }}
+              >
+                {profile.info}
+              </Typography>
+            </Grid>
+            <Grid item>
+              <Button
+                className={classes.backButton}
+                onClick={() => setDialogOpen(false)}
+                disableRipple
+                style={{ marginBottom: "2em" }}
+              >
+                Back
+              </Button>
+            </Grid>
+          </Grid>
         </Grid>
       </Dialog>
     </Grid>
