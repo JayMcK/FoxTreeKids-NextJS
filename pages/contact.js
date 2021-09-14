@@ -23,8 +23,7 @@ function Alert(props) {
 
 const useStyles = makeStyles((theme) => ({
   image: {
-    height: "100%",
-    width: "100%",
+    height: "60em",
   },
   infoText: {
     color: theme.palette.common.blue,
