@@ -1,4 +1,4 @@
-# My Portfolio - Fox Tree Kids
+# Fox Tree Kids
 
 Please visit the live site here: https://vercel.com/jaymck/fox-tree-kids-nextjs
 
